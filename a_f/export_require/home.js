@@ -1,0 +1,6 @@
+const {robo, valor, dizOi} = require('./utilitario.js')
+robo.apresentar()
+robo.passarLocalizacao()
+console.log(robo.dobrar(10))
+console.log(valor)
+dizOi()
