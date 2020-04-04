@@ -7,4 +7,4 @@ var person = {
     }
   };
 
-console.log(name = person.fullName())
+console.log(person.fullName())

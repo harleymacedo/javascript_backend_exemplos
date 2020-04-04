@@ -4,11 +4,10 @@ function doSomethingAsync() {
     })
 }
 
-async function doSomething() {
+async function doSomething() {   
+    console.log('Before')
     console.log(await doSomethingAsync())
+    console.log('After')
 }
 
-console.log('Before')
 doSomething()
-console.log('After')
-
