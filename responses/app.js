@@ -10,7 +10,7 @@ app.get('/html', function(req, res) {
 
 //Resposta json
 app.get('/json', function(req, res) {
-    res.status(201)
+    res.status(200)
     res.type('json')
     res.json({"nome": "Harley", "curso": "Sistemas de informação"})
 })
