@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alterar-bgcolor-timer</title>
+    <script>
+
+        setInterval(mudarCor, 2000)
+
+        function mudarCor() {
+            var num = Math.trunc(Math.random() * 999)
+            var codCor = "#" + num
+            console.log(codCor)
+            document.body.style.backgroundColor = codCor
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
