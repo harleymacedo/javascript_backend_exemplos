@@ -1,3 +1,4 @@
-var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-var citrus = fruits.slice(1, 3);
-console.log(citrus)
+var frutas = ["Banana", "Laranja", "Limão", "Macã", "Manga"]
+var citricas = frutas.slice(1, 3)
+console.log(citricas)
+

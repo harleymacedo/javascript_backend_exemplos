@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gestao-tarefas</title>
+    <style>
+        #div1 {
+            background-color:darkkhaki;
+            height: 200px;
+            width: 38%;
+            top: 200px;
+            position: absolute;
+        }
+        #div2 {
+            background-color: darkkhaki;
+            height: 200px;
+            width: 38%;
+            left: 60%;
+            top: 200px;
+            position: absolute;
+        }
+    </style>
+    <script>
+
+        let corAtual = 'white'
+        let idTarefa = 1
+
+        function alternarCor() {
+            if (corAtual == 'white') {
+                document.body.style.backgroundColor = 'silver'
+                corAtual = 'silver'
+            } else {
+                document.body.style.backgroundColor = 'white'
+                corAtual = 'white'
+            }
+        }
+
+        function adicionarTarefa() {
+            var liNovo = document.createElement("li")
+            liNovo.innerHTML = document.getElementById("input1").value
+            liNovo.setAttribute("id", idTarefa)
+            idTarefa++
+            document.getElementById("ul1").appendChild(liNovo)
+            liNovo.setAttribute("onClick", "jogarItemParaDireita(this)")
+        }
+
+        function jogarItemParaDireita(event) {
+            document.getElementById('ul2').appendChild(event)
+        }
+
+    </script>
+</head>
+<body>
+
+    <h2>Lista de tarefas</h2>
+    <p>
+        <img src="https://img.icons8.com/ios/50/000000/brightness-settings.png" 
+        onclick="alternarCor()" />
+    </p>
+
+    <div>
+        <label>Nova tarefa:</label><input type="text" id="input1" />
+        <button onClick="adicionarTarefa()">Adicionar</button> 
+    </div>
+
+    <div id="div1">
+        <ul id="ul1">
+            <h3>Pendentes</h3>
+            
+        </ul>
+    </div>
+
+    <div id="div2">
+        <ul id="ul2">
+            <h3>Prontas</h3>
+            
+        </ul>
+    </div>
+
+</body>
+</html>

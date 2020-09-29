@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forca-senha</title>
+    <script>
+        function verificarForcaSenha() {
+            var texto = document.getElementById("input1").value 
+            var num = texto.length
+            if (num >= 5) {
+                document.getElementById("img1").src = "https://img.icons8.com/emoji/48/000000/flexed-biceps.png"
+            } else {
+                document.getElementById("img1").src = "https://img.icons8.com/emoji/96/000000/slightly-frowning-face.png"
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>Cadastro de usuário</h3>
+    <label>Senha: </label> <input id="input1" type="password" onkeyup="verificarForcaSenha()" />
+    <p> <img src="https://img.icons8.com/emoji/96/000000/slightly-frowning-face.png" id="img1" /> </p>
+</body>
+</html>
